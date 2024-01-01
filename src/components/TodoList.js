@@ -14,7 +14,9 @@ function TodoList() {
 
   const getTodo = async () => {
     try {
-      const response = await axios.get("/api/v1/todos");
+      const response = await axios.get(
+        "https://backend-prod-4bbz.onrender.com/api/v1/todos"
+      );
       setTodos(response.data.data);
     } catch (error) {
       console.error("Error fetching todos:", error);
@@ -74,7 +76,7 @@ function TodoList() {
     };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
           if (searchQuery) {
             handleSearch();
           } else {
