@@ -7,9 +7,12 @@ function Form() {
     event.preventDefault();
     try {
       // Make a POST request to add a todo
-      const response = await axios.post("/api/v1/todo", {
-        task: input,
-      });
+      const response = await axios.post(
+        "https://backend-prod-4bbz.onrender.com/api/v1/todo",
+        {
+          task: input,
+        }
+      );
       // Optionally, you can clear the input after a successful submission
       setInput("");
     } catch (error) {

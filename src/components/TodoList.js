@@ -23,9 +23,12 @@ function TodoList() {
     }
   };
 
+  console.log(process.env.URL);
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`/api/v1/todo/${id}`);
+      await axios.delete(
+        `https://backend-prod-4bbz.onrender.com/api/v1/todo/${id}`
+      );
       setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
     } catch (error) {
       console.error("Error deleting todo:", error);
@@ -45,9 +48,12 @@ function TodoList() {
   const saveEditing = async (id) => {
     try {
       // Send a request to update the todo on the server
-      const response = await axios.put(`/api/v1/todo/${id}`, {
-        task: editedTodoText,
-      });
+      const response = await axios.put(
+        `https://backend-prod-4bbz.onrender.com/api/v1/todo/${id}`,
+        {
+          task: editedTodoText,
+        }
+      );
 
       // Update the local state with the edited todo
       setTodos((prevTodos) =>
@@ -67,7 +73,9 @@ function TodoList() {
 
     const handleSearch = async () => {
       try {
-        const response = await axios.get(`/api/v1/search?q=${searchQuery}`);
+        const response = await axios.get(
+          `https://backend-prod-4bbz.onrender.com/api/v1/search?q=${searchQuery}`
+        );
         setTodos(response.data.data);
         setIsSearchActive(true);
       } catch (error) {
