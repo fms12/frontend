@@ -1,4 +1,4 @@
-Live Here -> https://659321713fb340000877ae9c--tiny-muffin-d5235e.netlify.app
+Live Here -> https://659321713fb340000877ae9c--tiny-muffin-d5235e.netlify.app (backend + frontend + aws RDS)
 
 ![image](https://github.com/fms12/frontend/assets/68012074/3133409c-9668-4aeb-8e5d-6320d31fe883)
 ![image](https://github.com/fms12/frontend/assets/68012074/4a798f15-6680-4b27-b0ed-20093d3f6da3)
