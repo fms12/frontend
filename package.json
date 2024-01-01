@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/api": {
+    "/api/v1": {
       "target": "http://backend-prod-4bbz.onrender.com/",
       "secure": false
     }
