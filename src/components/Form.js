@@ -10,10 +10,6 @@ function Form() {
       const response = await axios.post("/api/v1/todo", {
         task: input,
       });
-
-      // Handle the response as needed
-      console.log("Todo added successfully:", response.data);
-
       // Optionally, you can clear the input after a successful submission
       setInput("");
     } catch (error) {

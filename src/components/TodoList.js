@@ -66,7 +66,6 @@ function TodoList() {
     const handleSearch = async () => {
       try {
         const response = await axios.get(`/api/v1/search?q=${searchQuery}`);
-        //  console.log(response);
         setTodos(response.data.data);
         setIsSearchActive(true);
       } catch (error) {
